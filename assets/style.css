@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, body{
+    margin: 0;
+    min-width: 280px;
+}
+
+.conteudo{
+    height: 97vh;
+    padding: 1.5rem;   /* 24 pixels de padding */
+    box-sizing: border-box;
+}
+
+.conteudo__superior{
+    box-sizing: border-box;
+}
+
+.conteudo__superior img{
+    width: 2rem;
+    height: 3rem;
+}
+
+.conteudo__principal{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    justify-content: flex-end;
+}
+
+#conteudo__principal__digite{
+    margin-top: 3.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #0A3871;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* estilizando o texto interno (placeholder) */
+
+#conteudo__principal__digite::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #0A3871;
+}
+
+
+.conteudo__principal__alerta{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* manipulando a imagem da da div "...alerta" sem criar outra class */
+
+.conteudo__principal__alerta img{
+    height:1rem;
+    width: 1rem;
+}
+
+.conteudo__principal__botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+
+}
+
+
+#conteudo__principal__botoes__botao{
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: solid 1px #0A3871;
+    border-radius: 24px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* usando o seletor nth-child para estilizar individualmente elementos da mesma div e classe */
+
+#conteudo__principal__botoes__botao:nth-child(1){
+    color: #FFFFFF;
+    background-color: #0A3871;
+    
+}
+
+#conteudo__principal__botoes__botao:nth-child(1):hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+#conteudo__principal__botoes__botao:nth-child(2){
+    color:#0A3871;
+    
+}
+
+#conteudo__principal__botoes__botao:nth-child(2):hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.conteudo__texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    box-sizing: border-box;
+}
+
+/* ocultando a imagem que sera manipulada apenas no modelo desktop */
+
+.conteudo__texto img{
+    display: none;
+}
+
+.conteudo__texto p{
+    margin: 0;
+}
+
+.conteudo__texto__caixa{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.conteudo__texto__caixa__texto1{
+    font-weight: 700;
+    font-size:1.5rem;
+    line-height:1.75rem;
+}
+
+.conteudo__texto__caixa__texto2{
+    font-weight: 400;
+    font-size: 1rem;      
+    line-height: 1.5rem;
+}
+
+.rodape{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape b{
+    color: #0A3871;
+}
+/* modificando apenas a segunda pagina, puxando class criada para o body */
+
+.pagina2 {
+   height: 100vh;
+}
+
+.pagina2 .conteudo{
+    height: auto;
+}
+
+.pagina2 #conteudo__principal__digite{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.pagina2 .conteudo__texto{
+    margin-top: 3rem;
+}
+
+.pagina2 #conteudo__texto__caixa {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #495057;
+}
+
+.conteudo__texto__copiar{
+    margin-top: 2rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: solid 1px #0A3871;
+    border-radius: 24px;
+    width: 85%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color:#0A3871 ;
+}
+
+.conteudo__texto__copiar:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+@media (min-width: 601px) and (max-width:1024px) {
+
+html, body{
+    min-width: 601px;
+}
+
+.conteudo{
+    padding: 4rem 2.5rem;
+}
+
+.conteudo__principal{
+    margin-top: 7.25rem;
+}
+.conteudo__principal__botoes{
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudo__texto{
+    height: 25%;
+}
+
+.pagina2 .conteudo{
+    height: auto;
+}
+
+.pagina2 .conteudo__principal{
+    margin-top: auto;
+}
+
+.pagina2 .conteudo__texto{
+    margin-top: 6rem;
+}
+
+}
+
+@media (min-width:1025px) {
+.conteudo{
+    display: flex;
+    gap: 5%;
+    padding: 2.5rem;
+}
+
+.conteudo__principal{
+    height: auto;
+    width: 60%;
+    justify-content: center;
+}
+
+#conteudo__principal__digite{
+    margin-top: 0;
+    margin-bottom: 9rem;
+}
+
+.conteudo__principal__botoes{
+    flex-direction: row;
+}
+
+.conteudo__texto{
+    height: auto;
+    width: 20%;
+}
+
+.conteudo__texto img{
+    display: block;
+    height: 19rem;
+    width: 21rem;
+}
+
+.pagina2 .conteudo{
+    height: 97vh;
+}
+
+.pagina2 .conteudo__principal{
+    width: 50%;
+}
+
+.pagina2 .conteudo__texto{
+    margin: 0;
+    justify-content: center;
+    gap: 7rem;
+    width: 30%;
+}
+
+}
